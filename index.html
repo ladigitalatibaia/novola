@@ -1,13 +1,420 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital LA - Soluções Inteligentes para Seus Dispositivos</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital LA - Assistência Técnica Especializada em Atibaia. Conserto de celular, tablet e notebook com garantia. Orçamento gratuito via WhatsApp!">
+    <meta name="keywords" content="assistência técnica Atibaia, conserto celular Atibaia, reparo smartphone Atibaia, manutenção celular, Digital LA Atibaia">
+    <meta name="author" content="Digital LA">
+    <title>Digital LA Atibaia - Assistência Técnica Especializada | Conserto de Celular</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Digital LA Atibaia - Assistência Técnica Especializada">
+    <meta property="og:description" content="Conserto de celular, tablet e notebook em Atibaia com garantia. Orçamento gratuito!">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="contact-info">
+                    <a href="tel:+5511980833734" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <span>(11) 98083-3734</span>
+                    </a>
+                    <a href="https://wa.me/5511980833734" target="_blank" class="contact-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/digitalla_atibaia/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/digitalla.atibaia" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="header-main">
+                <div class="logo">
+                    <h1>Digital LA</h1>
+                    <span class="location">Atibaia - SP</span>
+                </div>
+                
+                <nav class="nav" id="nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#servicos" class="nav-link">Serviços</a>
+                    <a href="#seminovos" class="nav-link">Seminovos</a>
+                    <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                </nav>
+                
+                <a href="https://wa.me/5511980833734?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-primary btn-header">
+                    <i class="fab fa-whatsapp"></i>
+                    Fale Conosco
+                </a>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Assistência Técnica Especializada em <span class="highlight">Atibaia</span></h2>
+                    <p class="hero-subtitle">
+                        Conserto de celular, tablet e notebook com <strong>diagnóstico preciso</strong>, 
+                        <strong>peças de qualidade</strong> e <strong>garantia</strong>. 
+                        Atendimento rápido e profissional para você em Atibaia!
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5511980833734?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-success btn-lg">
+                            <i class="fab fa-whatsapp"></i>
+                            Solicite seu Orçamento Gratuito
+                        </a>
+                        <a href="#servicos" class="btn btn-outline btn-lg">
+                            Conheça Nossos Serviços
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="hero-contact">
+                        <i class="fas fa-phone"></i>
+                        <span>(11) 98083-3734</span>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/pexels-photo-788946.jpeg" alt="Assistência Técnica Digital LA Atibaia">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span>Atendimento Online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços em Atibaia</h2>
+                <p class="section-subtitle">
+                    Soluções completas para manter seu dispositivo sempre funcionando perfeitamente
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Análise Completa</h3>
+                    <p>Diagnóstico preciso com tecnologia de ponta para identificar a causa raiz de qualquer problema no seu aparelho.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Manutenção Especializada</h3>
+                    <p>Reparos realizados com componentes de alta qualidade, garantindo durabilidade e performance superior.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Otimização de Performance</h3>
+                    <p>Deixe seu dispositivo mais rápido e responsivo. Removemos a lentidão para melhor aproveitamento.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Atualização e Segurança</h3>
+                    <p>Mantenha seu sistema seguro e atualizado, protegendo seus dados e garantindo estabilidade.</p>
+                </div>
+            </div>
+
+            <div class="expertise-section">
+                <div class="expertise-image">
+                    <img src="assets/pexels-photo-1921326.jpeg" alt="Tecnologia de Ponta Digital LA">
+                </div>
+                <div class="expertise-content">
+                    <h3 class="expertise-title">Tecnologia de Ponta em Atibaia</h3>
+                    <p class="expertise-text">
+                        Investimos constantemente em equipamentos modernos e inovadores. Nossa equipe 
+                        especializada garante que cada serviço seja executado com a máxima precisão.
+                    </p>
+                    <div class="differentials">
+                        <div class="differential-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Técnicos Qualificados</h4>
+                                <p>Equipe capacitada e atualizada com as últimas tecnologias</p>
+                            </div>
+                        </div>
+                        <div class="differential-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Equipamentos Modernos</h4>
+                                <p>Diagnósticos precisos e reparos eficientes</p>
+                            </div>
+                        </div>
+                        <div class="differential-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Atendimento Ágil</h4>
+                                <p>Comunicação clara e honesta em todas as etapas</p>
+                            </div>
+                        </div>
+                        <div class="differential-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Garantia de Qualidade</h4>
+                                <p>Peças de alta qualidade com garantia em todos os serviços</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seminovos Section -->
+    <section class="seminovos" id="seminovos">
+        <div class="container">
+            <div class="seminovos-content">
+                <div class="seminovos-text">
+                    <h2 class="section-title">Dispositivos Seminovos com Garantia</h2>
+                    <p class="seminovos-description">
+                        Procurando um aparelho com preço justo e total confiança? Nossa curadoria de 
+                        dispositivos seminovos passa por uma revisão técnica completa de mais de 30 itens, 
+                        garantindo performance e qualidade.
+                    </p>
+                    <ul class="benefits-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Revisão completa de mais de 30 itens</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Garantia de 3 meses</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Preços competitivos</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Qualidade garantida</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5511980833734?text=Olá!%20Gostaria%20de%20ver%20o%20catálogo%20de%20seminovos." target="_blank" class="btn btn-primary btn-lg">
+                        Ver Catálogo de Seminovos
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="seminovos-image">
+                    <img src="assets/pexels-photo-4126724.jpeg" alt="Dispositivos Seminovos Digital LA">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+                <p class="section-subtitle">A satisfação dos nossos clientes em Atibaia é a nossa maior recompensa</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Excelente atendimento! Meu celular ficou como novo após o reparo. 
+                        Recomendo a todos em Atibaia!"
+                    </p>
+                    <p class="testimonial-author">Carlos Silva</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Profissionais muito competentes. Resolveram o problema do meu smartphone rapidamente."
+                    </p>
+                    <p class="testimonial-author">Maria Santos</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Preço justo e serviço de qualidade. Já indiquei para vários amigos."
+                    </p>
+                    <p class="testimonial-author">João Oliveira</p>
+                </div>
+            </div>
+            
+            <div class="google-rating">
+                <i class="fas fa-star"></i>
+                <span>Avaliação 5.0 no Google</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Fale com um Especialista Agora</h2>
+                <p class="section-subtitle">Estamos em Atibaia prontos para te ajudar</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Atendimento rápido e direto</p>
+                    <a href="https://wa.me/5511980833734?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-success">
+                        <i class="fab fa-whatsapp"></i>
+                        Iniciar Conversa
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Endereço</h3>
+                    <p>Atibaia - SP</p>
+                    <a href="https://www.google.com/maps/search/Digital+LA+Atibaia" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Ver no Mapa
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Horário</h3>
+                    <p class="schedule">
+                        <strong>Seg-Sex:</strong> 9h às 18h<br>
+                        <strong>Sáb:</strong> 9h às 14h
+                    </p>
+                </div>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <h3 class="form-title">Entre em Contato</h3>
+                <p class="form-subtitle">Envie sua mensagem e entraremos em contato o mais breve possível</p>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(DD) XXXXX-XXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Descreva sua necessidade ou dúvida" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                        <i class="fab fa-whatsapp"></i>
+                        Enviar via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3 class="footer-logo">Digital LA</h3>
+                    <p>Assistência Técnica Especializada em Atibaia - SP</p>
+                    <p>Soluções Inteligentes para Seus Dispositivos</p>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/digitalla_atibaia/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/digitalla.atibaia" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/5511980833734" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Digital LA. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511980833734?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
 </html>
