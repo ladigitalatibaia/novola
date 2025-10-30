@@ -95,6 +95,118 @@
         </div>
     </header>
 
-    <!-- (restante do seu código permanece exatamente igual) -->
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Soluções Inteligentes para Seus Dispositivos</h2>
+                    <p class="hero-subtitle">
+                        Análise técnica precisa, manutenção especializada e dispositivos seminovos com garantia. 
+                        Cuidamos da saúde do seu aparelho com a agilidade e a qualidade que você merece.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5511980833734?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-success btn-lg">
+                            <i class="fab fa-whatsapp"></i>
+                            Solicite seu Orçamento Gratuito
+                        </a>
+                        <a href="#servicos" class="btn btn-outline btn-lg">
+                            Conheça Nossos Serviços
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="hero-contact">
+                        <i class="fas fa-phone"></i>
+                        <span>(11) 98083-3734</span>
+                    </div>
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        Atendimento Online
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-image.png" alt="Técnico trabalhando em reparo de dispositivos - Digital LA Atibaia">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Cuidados Especializados</h2>
+                <p class="section-subtitle">Oferecemos a solução ideal para manter seu dispositivo sempre em perfeito funcionamento, com agilidade e transparência.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-search"></i></div>
+                    <h3 class="service-title">Análise Completa</h3>
+                    <p class="service-description">Diagnóstico preciso com tecnologia de ponta, identificando a causa de qualquer problema no seu aparelho.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3 class="service-title">Manutenção Especializada</h3>
+                    <p class="service-description">Componentes de alta qualidade para garantir durabilidade e performance superior.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3 class="service-title">Otimização de Performance</h3>
+                    <p class="service-description">Torne seu dispositivo mais rápido e responsivo, eliminando travamentos e lentidão.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="service-title">Atualização e Segurança</h3>
+                    <p class="service-description">Mantenha seu sistema atualizado e seguro, com as últimas melhorias de desempenho e proteção.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- (restante do código igual ao seu original, sem alterações) -->
+
+    <!-- JavaScript -->
+    <script>
+        // Menu Toggle
+        const menuToggle = document.getElementById("menuToggle");
+        const nav = document.getElementById("nav");
+        
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+            menuToggle.classList.toggle("active");
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll("a[href^=\"#\"]").forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    nav.classList.remove("active");
+                    menuToggle.classList.remove("active");
+                }
+            });
+        });
+
+        // Contact Form
+        const contactForm = document.getElementById("contactForm");
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+            const whatsappMessage = `Olá! Meu nome é ${name}.%0A%0ATelefone: ${phone}%0A%0AMensagem: ${message}`;
+            const whatsappURL = `https://wa.me/5511980833734?text=${whatsappMessage}`;
+            window.open(whatsappURL, "_blank");
+        });
+
+        // Header Scroll Effect
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector(".header");
+            header.classList.toggle("scrolled", window.scrollY > 100);
+        });
+    </script>
 </body>
 </html>
