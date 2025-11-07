@@ -267,14 +267,14 @@ body {
 .hero-title {
     font-size: 3rem;
     font-weight: 900;
-    color: var(--dark-color);
+    color: var(--dark-color); /* Mantendo a cor escura, mas garantindo que não foi alterada */
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .hero-subtitle {
     font-size: 1.15rem;
-    color: var(--text-muted);
+    color: var(--text-color); /* Alterando para uma cor mais escura para maior visibilidade */
     margin-bottom: 30px;
     line-height: 1.7;
 }
