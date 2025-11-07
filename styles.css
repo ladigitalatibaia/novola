@@ -868,3 +868,118 @@ body {
         font-size: 1.75rem;
     }
 }
+
+/* Video Cover Section Styles */
+.video-cover {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Altura total da viewport */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Fundo preto para o caso de o vídeo demorar a carregar */
+}
+
+.video-cover .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite clicar através do vídeo */
+}
+
+.video-cover iframe {
+    width: 100vw;
+    height: 56.25vw; /* 100/16*9 = 56.25 */
+    min-height: 100vh;
+    min-width: 177.77vh; /* 100/9*16 = 177.77 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Ajuste para o Hero Section para ficar por cima do vídeo */
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10; /* Garante que o conteúdo do Hero fique por cima */
+    background: rgba(0, 0, 0, 0.5); /* Overlay escuro para melhorar a leitura do texto */
+    padding: 0; /* Remove o padding padrão para cobrir toda a tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .container {
+    z-index: 11;
+}
+
+.hero-content {
+    /* Ajustes para o conteúdo do Hero */
+    position: relative;
+    z-index: 12;
+    text-align: center;
+    color: #fff; /* Texto branco para contraste */
+    display: block; /* Altera para bloco para centralizar melhor */
+}
+
+.hero-title, .hero-subtitle {
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .hero-image {
+    display: none; /* Oculta a imagem do Hero, pois o vídeo será o fundo */
+}
+
+.hero-buttons {
+    justify-content: center;
+}
+
+.hero-contact, .status-badge {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero-contact i {
+    color: var(--primary-color);
+}
+
+/* Media Query para telas menores */
+@media (max-width: 992px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-content .hero-image {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-cover {
+        height: 60vh; /* Reduz a altura em telas menores, se necessário */
+    }
+    
+    .hero {
+        height: 60vh;
+    }
+}
+
+/* Ajuste para a seção que vem depois do vídeo */
+.services {
+    margin-top: 0; /* Garante que a próxima seção comece logo após o vídeo */
+}
