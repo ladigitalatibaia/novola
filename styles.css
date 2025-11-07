@@ -35,6 +35,29 @@ body {
     padding: 0 20px;
 }
 
+/* Disclaimer Bar Styles */
+.disclaimer-bar {
+    background-color: #ffc107; /* Amarelo para destaque */
+    color: #343a40;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.disclaimer-bar strong {
+    font-weight: 700;
+}
+
+.disclaimer-footer {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
 /* Header */
 .header {
     background-color: #ffffff;
@@ -754,6 +777,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 992px) {
+    .disclaimer-bar {
+        font-size: 0.8rem;
+    }
     .hero-content,
     .about-content,
     .seminovos-content,
@@ -956,6 +982,9 @@ body {
 
 /* Media Query para telas menores */
 @media (max-width: 992px) {
+    .disclaimer-bar {
+        font-size: 0.8rem;
+    }
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
