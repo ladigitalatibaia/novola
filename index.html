@@ -41,10 +41,21 @@
             <div class="hero-text">
                 <h1 class="hero-title">Digital LA</h1>
                 <h2 class="hero-subtitle">Soluções inovadoras para seus dispositivos em Atibaia e região</h2>
-                <p class="hero-description">
-                    Especialistas em cuidados técnicos e manutenção de dispositivos móveis em Atibaia-SP. 
-                    Tecnologia de ponta com o cuidado que seu aparelho merece.
-                </p>
+                
+                <!-- Formulário de Solicitação de Orçamento -->
+                <div class="quote-form-section">
+                    <h3 class="quote-form-title">Precisa de um orçamento?</h3>
+                    <p class="quote-form-subtitle">Por favor, informe o modelo do aparelho e o defeito apresentado para que possamos gerar o orçamento</p>
+                    
+                    <form class="quote-form" id="quoteForm">
+                        <input type="text" placeholder="Seu nome completo" class="form-input" id="clientName" required>
+                        <input type="tel" placeholder="(11) 99999-9999" class="form-input" id="clientPhone" required>
+                        <textarea placeholder="Modelo do aparelho e descrição do defeito&#10;(ex: iPhone 11 com tela trincada,&#10;Samsung Galaxy S20 com bateria ruim)" class="form-textarea" id="clientMessage" required></textarea>
+                        <button type="submit" class="form-submit-btn">Enviar Solicitação de Orçamento</button>
+                    </form>
+                    
+                    <p class="quote-form-note"><strong>Não sabe o modelo? Fotos frente e verso pelo WhatsApp</strong></p>
+                </div>
                 
                 <div class="cta-buttons-group">
                     <a href="https://wa.me/5511980833734?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20r%C3%A1pido%20pelo%20Whats%21" class="cta-button whatsapp-cta">
@@ -107,7 +118,6 @@
             </div>
         </div>
     </section>
-    
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
@@ -220,36 +230,28 @@
                     <p>Ver informações</p>
                 </a>
             </div>
-            
-            <!-- FORMULÁRIO ADICIONADO AQUI -->
-            <div class="contact-form-container">
-                <h3 class="form-title">Precisa de um orçamento?</h3>
-                <p class="form-subtitle">Por favor, informe o modelo do aparelho e o defeito apresentado para que possamos gerar o orçamento.</p>
-                
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Seu telefone (WhatsApp)" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <textarea id="message" name="message" 
-                                  placeholder="Modelo do aparelho e descrição do defeito (ex: iPhone 11 com tela trincada, Samsung Galaxy S20 não carrega, etc.)" 
-                                  rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-button">
-                        <i class="fas fa-paper-plane"></i> Enviar Solicitação de Orçamento
-                    </button>
-                </form>
-            </div>
-            <!-- FIM DO FORMULÁRIO -->
+
             
         </div>
-    </section>
+	</section>
+
+    <!-- Script para enviar formulário ao WhatsApp -->
+    <script>
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const message = document.getElementById('clientMessage').value;
+            
+            const whatsappNumber = '5511980833734';
+            const text = `Olá! Gostaria de um orçamento.\n\nNome: ${name}\nTelefone: ${phone}\n\nDetalhes do aparelho:\n${message}`;
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
@@ -266,87 +268,6 @@
                 <p class="footer-copyright">&copy; 2025 Digital LA. Todos os direitos reservados.</p>
         </div>
     </footer>
+	</body>
+	</html>
 
-    <!-- Script para o formulário -->
-    <script>
-        // Validação do Formulário de Contato
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contactForm');
-            
-            if (contactForm) {
-                // Máscara para telefone
-                const phoneInput = document.getElementById('phone');
-                if (phoneInput) {
-                    phoneInput.addEventListener('input', function(e) {
-                        let value = e.target.value.replace(/\D/g, '');
-                        
-                        if (value.length > 0) {
-                            if (value.length <= 2) {
-                                value = '(' + value;
-                            } else if (value.length <= 7) {
-                                value = '(' + value.substring(0, 2) + ') ' + value.substring(2);
-                            } else if (value.length <= 11) {
-                                value = '(' + value.substring(0, 2) + ') ' + value.substring(2, 7) + '-' + value.substring(7);
-                            } else {
-                                value = '(' + value.substring(0, 2) + ') ' + value.substring(2, 7) + '-' + value.substring(7, 11);
-                            }
-                        }
-                        
-                        e.target.value = value;
-                    });
-                }
-                
-                // Envio do formulário
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const name = document.getElementById('name').value.trim();
-                    const phone = document.getElementById('phone').value.trim();
-                    const message = document.getElementById('message').value.trim();
-                    
-                    let isValid = true;
-                    
-                    // Validação do nome
-                    if (name.length < 3) {
-                        alert('Por favor, digite seu nome completo');
-                        isValid = false;
-                    }
-                    
-                    // Validação do telefone
-                    const phoneRegex = /^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$/;
-                    if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
-                        alert('Por favor, digite um telefone válido com DDD');
-                        isValid = false;
-                    }
-                    
-                    // Validação da mensagem
-                    if (message.length < 10) {
-                        alert('Por favor, descreva o modelo e defeito do aparelho');
-                        isValid = false;
-                    }
-                    
-                    if (isValid) {
-                        // Montar mensagem para WhatsApp
-                        const whatsappMessage = `Olá! Meu nome é ${name}. Telefone: ${phone}. %0A%0ADetalhes do serviço: ${message}`;
-                        
-                        // Redirecionar para WhatsApp
-                        window.open(`https://wa.me/5511980833734?text=${whatsappMessage}`, '_blank');
-                        
-                        // Limpar formulário
-                        contactForm.reset();
-                        
-                        // Rastrear conversão no Google Analytics
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'lead', {
-                                'send_to': 'AW-17116819067'
-                            });
-                        }
-                        
-                        alert('Redirecionando para o WhatsApp com suas informações!');
-                    }
-                });
-            }
-        });
-    </script>
-</body>
-</html>

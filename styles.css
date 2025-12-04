@@ -1,6 +1,472 @@
-/* ... (TODO O CSS ANTERIOR PERMANECE IGUAL) ... */
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Responsividade - CORREÇÃO PARA MOBILE */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #27ae60;
+    font-size: 1.8rem; /* Reduz o tamanho da fonte do título principal */
+    font-weight: 700;
+    margin-bottom: -5px;
+}
+
+.logo span {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
+}
+
+.nav-link:hover {
+    color: #27ae60;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #27ae60;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 50%, #e1f5fe 100%);
+    padding-top: 100px;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('tech-nature.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-text {
+    /* Adicionado para centralizar o texto e evitar cortes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 0 20px; /* Adiciona padding lateral para evitar que o texto toque as bordas em telas muito pequenas */
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #27ae60;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    /* Adicionado para garantir que o texto não ultrapasse o contêiner */
+    max-width: 100%; 
+    word-wrap: break-word;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(243, 156, 18, 0.4);
+}
+
+/* Estilo para o botão do WhatsApp */
+.whatsapp-cta {
+    background: linear-gradient(135deg, #25d366, #128c7e); /* Cor verde do WhatsApp */
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+}
+
+.phone-cta {
+    /* Mantém a cor laranja padrão do cta-button */
+    margin-left: 1rem; /* Espaço entre os botões */
+}
+
+.cta-buttons-group {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    margin-bottom: 2.5rem; /* Espaço após o grupo de botões */
+}
+
+@media (max-width: 480px) {
+    .cta-buttons-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    .phone-cta {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}tém a cor laranja padrão do cta-button */
+    margin-left: 1rem; /* Espaço entre os botões */
+}
+
+.cta-buttons-group {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    margin-bottom: 2.5rem; /* Espaço após o grupo de botões */
+}
+
+@media (max-width: 480px) {
+    .cta-buttons-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    .phone-cta {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+    padding: 6rem 0;
+    background: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-color: #27ae60;
+}
+
+.service-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.05);
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.contact-description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 3rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.1);
+}
+
+.contact-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contact-card p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Cores específicas para cada rede social */
+.whatsapp .contact-icon {
+    background: #25d366;
+}
+
+.whatsapp:hover {
+    border-color: #25d366;
+}
+
+.phone .contact-icon {
+    background: #3498db;
+}
+
+.phone:hover {
+    border-color: #3498db;
+}
+
+.facebook .contact-icon {
+    background: #1877f2;
+}
+
+.facebook:hover {
+    border-color: #1877f2;
+}
+
+.instagram .contact-icon {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.instagram:hover {
+    border-color: #e6683c;
+}
+
+.tiktok .contact-icon {
+    background: #000000;
+}
+
+.tiktok:hover {
+    border-color: #000000;
+}
+
+.youtube .contact-icon {
+    background: #ff0000;
+}
+
+.youtube:hover {
+    border-color: #ff0000;
+}
+
+.maps .contact-icon {
+    background: #34a853;
+}
+
+.maps:hover {
+    border-color: #34a853;
+}
+
+.google-my-business .contact-icon {
+    background: #4285f4;
+}
+
+.google-my-business:hover {
+    border-color: #4285f4;
+}
+
+.social-media-section {
+    margin-top: 4rem;
+}
+
+.social-media-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.social-media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Estilo para o rodapé e ícones sociais */
+
+
+/* Responsividade */
 @media (max-width: 768px) {
     .header {
         padding: 0.5rem 0; /* Reduz o padding vertical do header */
@@ -15,9 +481,7 @@
     }
 
     .hero {
-        padding-top: 100px; /* Ajuste para cabeçalho menor */
-        min-height: auto;
-        padding-bottom: 3rem;
+        padding-top: 220px; /* Aumenta o padding para garantir que o conteúdo comece abaixo do cabeçalho fixo */
     }
 
     .hero-content {
@@ -27,191 +491,66 @@
     }
 
     .hero-title {
-        font-size: 2rem; /* Reduzido de 2.5rem */
+        font-size: 2.5rem;
     }
     .hero-text {
-        padding: 0 15px; /* Reduzido padding */
+        padding: 0 20px; /* Aumenta o padding no mobile para melhor visualização */
     }
 
     .hero-subtitle {
-        font-size: 1.2rem; /* Reduzido de 1.4rem */
+        font-size: 1.4rem;
         /* Garante que o subtítulo não seja cortado */
         max-width: 100%;
         word-wrap: break-word;
-        line-height: 1.3;
-        margin-bottom: 1rem;
-    }
-
-    .hero-description {
-        font-size: 0.95rem; /* Reduzido de 1.1rem */
-        line-height: 1.5;
-        margin-bottom: 1.5rem;
-    }
-
-    .cta-buttons-group {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .phone-cta {
-        margin-left: 0;
-        margin-top: 0;
-    }
-
-    /* CORREÇÃO IMAGEM HERO MOBILE - MAIS IMPORTANTE! */
-    .hero-image img {
-        max-width: 300px; /* Tamanho máximo reduzido */
-        width: 90%; /* Ocupa 90% da tela no mobile */
-        height: auto;
-        margin: 0 auto;
-        border-radius: 15px; /* Reduzido de 20px */
     }
 
     .services-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem; /* Reduzido de 2rem */
-    }
-
-    /* CORREÇÃO IMAGENS DOS SERVIÇOS NO MOBILE */
-    .service-card {
-        padding: 1.5rem 1.2rem; /* Reduzido padding */
-    }
-
-    .service-image {
-        width: 100px; /* Reduzido de 140px */
-        height: 100px; /* Reduzido de 140px */
-        margin-bottom: 1rem; /* Reduzido */
-    }
-
-    .service-card h3 {
-        font-size: 1.2rem; /* Reduzido */
-        margin-bottom: 0.8rem;
-        min-height: auto; /* Remove altura fixa */
-    }
-
-    .service-card p {
-        font-size: 0.9rem; /* Reduzido */
-        line-height: 1.4;
-    }
-
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem; /* Reduzido */
-    }
-
-    .testimonial-card {
-        padding: 1.5rem; /* Reduzido */
-        min-height: auto; /* Remove altura fixa */
-    }
-
-    .testimonial-text {
-        font-size: 1rem; /* Reduzido */
-        min-height: auto; /* Remove altura fixa */
-        margin-bottom: 1rem;
     }
 
     .contact-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem; /* Reduzido */
     }
 
-    .contact-card {
-        padding: 1.5rem 1rem; /* Reduzido */
-    }
-
-    /* FORMULÁRIO NO MOBILE */
-    .contact-form-container {
-        padding: 1.5rem 1.2rem;
-        margin: 2rem auto 0;
-    }
-    
-    .form-title {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
-    }
-    
-    .form-subtitle {
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
-        line-height: 1.4;
-    }
-    
-    .form-group input,
-    .form-group textarea {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-    }
-    
-    .submit-button {
-        padding: 0.9rem;
-        font-size: 0.95rem;
-    }
-
-    .footer-content-wrapper {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .footer-cta {
-        font-size: 0.95rem; /* Reduzido */
-        order: 2;
-        margin-top: 1rem;
-        line-height: 1.3;
-        padding: 0 10px;
-    }
-
-    .social-media-footer {
-        order: 1;
-        gap: 0.8rem; /* Reduzido */
+    .social-media-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .social-media-footer a {
-        font-size: 1.5rem; /* Reduzido de 1.8rem */
+        font-size: 1.5rem; /* Ajuste o tamanho dos ícones no mobile */
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-info {
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+    }
+
+    .social-media-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero {
-        padding-top: 90px;
+        padding-top: 120px;
     }
 
     .cta-button {
-        padding: 0.9rem 1.5rem; /* Reduzido */
-        font-size: 0.9rem; /* Reduzido */
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 
     .service-image {
-        width: 90px; /* Mais reduzido */
-        height: 90px; /* Mais reduzido */
-    }
-    
-    .hero-title {
-        font-size: 1.8rem; /* Mais reduzido */
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem; /* Mais reduzido */
-    }
-    
-    .hero-image img {
-        max-width: 280px; /* Mais reduzido */
-    }
-    
-    .section-title {
-        font-size: 1.8rem; /* Reduzido de 2rem */
-        margin-bottom: 2rem; /* Reduzido */
-    }
-    
-    .contact-description {
-        font-size: 1rem; /* Reduzido */
-        margin-bottom: 2rem; /* Reduzido */
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -246,4 +585,300 @@
 
 .service-card:nth-child(5) {
     animation-delay: 0.4s;
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    padding: 6rem 0;
+    background: #f4f4f4; /* Fundo levemente cinza para destacar */
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px; /* Altura mínima para padronizar */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.testimonial-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #ecf0f1;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.stars {
+    color: #f39c12; /* Cor amarela/laranja para as estrelas */
+    font-size: 1rem;
+}
+
+.stars .fas.fa-star {
+    margin-right: 2px;
+}
+
+/* Responsividade para a seção de avaliações */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilo para o rodapé */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0 1rem;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.footer-cta {
+    color: #ffffff;
+    font-size: 1.2rem; /* Aumentando um pouco o tamanho */
+    font-weight: 700; /* Deixando a fonte mais grossa (bold) */
+    margin: 0;
+    flex-grow: 1; /* Permite que a frase ocupe o espaço central */
+    text-align: center;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Adicionando uma leve sombra para destacar */
+}
+
+.social-media-footer {
+    margin: 0; /* Remove margem inferior que estava causando problemas */
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media-footer a {
+    color: white;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-media-footer a:hover {
+    color: #27ae60;
+}
+
+.footer-copyright {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-cta {
+        font-size: 1rem;
+    }
+
+    .social-media-footer {
+        justify-content: center;
+    }
+}
+
+
+/* Estilos do Formulário de Orçamento */
+.quote-form-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 15px;
+    margin: 2.5rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+.quote-form-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.quote-form-subtitle {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-input,
+.form-textarea {
+    padding: 0.9rem 1rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #bdc3c7;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.form-submit-btn {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+}
+
+.form-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(243, 156, 18, 0.4);
+}
+
+.form-submit-btn:active {
+    transform: translateY(-1px);
+}
+
+.quote-form-note {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+}
+
+.quote-form-note strong {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* Responsividade do Formulário */
+@media (max-width: 768px) {
+    .quote-form-section {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .quote-form-title {
+        font-size: 1.5rem;
+    }
+    
+    .quote-form-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .form-input,
+    .form-textarea {
+        padding: 0.8rem 0.9rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-submit-btn {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-form-section {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .quote-form-title {
+        font-size: 1.3rem;
+    }
+    
+    .quote-form-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .form-input,
+    .form-textarea {
+        padding: 0.75rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .form-submit-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .quote-form-note {
+        font-size: 0.85rem;
+    }
 }
