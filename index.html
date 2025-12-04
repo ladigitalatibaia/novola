@@ -3,567 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Digital LA - Soluções Inteligentes para Seus Dispositivos. Análise técnica precisa, manutenção especializada e dispositivos seminovos com garantia em Atibaia.">
-    <meta name="keywords" content="assistência técnica Atibaia, conserto celular Atibaia, reparo smartphone Atibaia, manutenção celular, Digital LA Atibaia, seminovos">
-    <meta name="author" content="Digital LA">
-    <title>Digital LA - Soluções Inteligentes para Seus Dispositivos</title>
+    <title>Digital LA - Soluções Inovadoras para Seus Dispositivos</title>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Digital LA - Soluções Inteligentes para Seus Dispositivos">
-    <meta property="og:description" content="Análise técnica precisa, manutenção especializada e dispositivos seminovos com garantia. Cuidamos da saúde do seu aparelho com agilidade e qualidade.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- CSS -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17116819067"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17116819067');
+    </script>
+
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5511980833734?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20r%C3%A1pido%20pelo%20Whats%21" 
+       class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="header-top">
-                <div class="contact-info">
-                    <a href="tel:+5511980833734" class="contact-link">
-                        <i class="fas fa-phone"></i>
-                        <span>(11) 98083-3734</span>
-                    </a>
-                    <a href="https://wa.me/5511980833734" target="_blank" class="contact-link whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp</span>
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/lacellcelulares/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/people/Lacellcelulares/61576539152584/" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@lacellcelulares/shorts" target="_blank" aria-label="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@lea.cell.infocell" target="_blank" aria-label="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
+            <div class="logo">
+                <h1>Digital LA</h1>
+                <span>Atibaia - SP</span>
             </div>
             
-            <div class="header-main">
-                <div class="logo">
-                    <h1>Digital LA</h1>
-                    <span class="location">Atibaia - SP</span>
-                </div>
-                
-                <nav class="nav" id="nav">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#servicos" class="nav-link">Nossos Serviços</a>
-                    <a href="#seminovos" class="nav-link">Seminovos</a>
-                    <a href="#depoimentos" class="nav-link">Depoimentos</a>
-                    <a href="#contato" class="nav-link">Contato</a>
-                </nav>
-                
-                <a href="https://wa.me/5511980833734?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-primary btn-header">
-                    <i class="fab fa-whatsapp"></i>
-                    Fale Conosco
-                </a>
-                
-                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#services" class="nav-link">Serviços</a>
+                <a href="#testimonials" class="nav-link">Avaliações</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Disclaimer for Google Ads Policy -->
-    <div class="disclaimer-bar">
-        <div class="container">
-            <p><strong>AVISO IMPORTANTE:</strong> A Digital LA é uma empresa de assistência técnica independente e não possui afiliação, endosso ou autorização de nenhuma marca de fabricante de dispositivos (OEM), incluindo, mas não se limitando a, Apple, Samsung, Xiaomi, etc. Todas as marcas registradas são de propriedade de seus respectivos donos.</p>
-        </div>
-    </div>
-
-    <!-- Hero/Video Section -->
-    <section class="hero-video-section" id="home">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h2 class="hero-title">Soluções Inteligentes para Seus Dispositivos</h2>
-                    <p class="hero-subtitle">
-                        Análise técnica precisa, manutenção especializada e dispositivos seminovos com garantia. 
-                        Cuidamos da saúde do seu aparelho com a agilidade e a qualidade que você merece.
+                    <h1 class="hero-title">Digital LA</h1>
+                    <h2 class="hero-subtitle">Soluções inovadoras para seus dispositivos em Atibaia e região</h2>
+                    <p class="hero-description">
+                        Especialistas em cuidados técnicos e manutenção de dispositivos móveis em Atibaia-SP. 
+                        Tecnologia de ponta com o cuidado que seu aparelho merece.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="https://wa.me/5511980833734?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-success btn-lg">
+                    
+                    <div class="cta-buttons-group">
+                        <a href="https://wa.me/5511980833734?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20r%C3%A1pido%20pelo%20Whats%21" 
+                           class="cta-button whatsapp-cta" target="_blank">
                             <i class="fab fa-whatsapp"></i>
-                            Solicite seu Orçamento Gratuito
+                            Quer um orçamento rápido pelo Whats? Só clicar aqui!
                         </a>
-                        <a href="#servicos" class="btn btn-outline btn-lg">
-                            Conheça Nossos Serviços
-                            <i class="fas fa-arrow-right"></i>
+                        <a href="#contact" class="cta-button phone-cta">
+                            <i class="fas fa-phone"></i>
+                            Fale Conosco Agora!
                         </a>
-                    </div>
-                    <div class="hero-contact">
-                        <i class="fas fa-phone"></i>
-                        <span>(11) 98083-3734</span>
-                    </div>
-                    <div class="status-badge">
-                        <span class="status-dot"></span>
-                        Atendimento Online
                     </div>
                 </div>
+                
                 <div class="hero-image">
-                    <img src="hero-image.png" alt="Técnico trabalhando em reparo de dispositivos - Digital LA Atibaia">
+                    <img src="smartphone-nature.jpg" alt="Dispositivo móvel em ambiente natural">
                 </div>
-            </div>
-        </div>
-        
-        <!-- Video Cover Section -->
-        <div class="video-cover">
-            <div class="video-container">
-                <iframe 
-                    src="https://www.youtube.com/embed/rQmI3FSqnRE?autoplay=1&mute=1&loop=1&playlist=rQmI3FSqnRE&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen
-                ></iframe>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="servicos">
+    <section id="services" class="services">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nossos Cuidados Especializados</h2>
-                <p class="section-subtitle">Oferecemos a solução ideal para manter seu dispositivo sempre em perfeito funcionamento, com agilidade e transparência.</p>
-            </div>
+            <h2 class="section-title">Nossos Serviços</h2>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
+                    <div class="service-image">
+                        <img src="diagnostico.png" alt="Serviço de Diagnóstico">
                     </div>
-                    <h3 class="service-title">Análise Completa</h3>
-                    <p class="service-description">
-                        Utilizamos tecnologia de ponta para um diagnóstico preciso, identificando a causa raiz de qualquer instabilidade no seu aparelho.
-                    </p>
+                    <h3>Verificação de funcionamento</h3>
+                    <p>Avaliação completa e precisa para identificar questões em seu dispositivo móvel.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
+                    <div class="service-image">
+                        <img src="reparo.png" alt="Serviço de Reparo">
                     </div>
-                    <h3 class="service-title">Manutenção Especializada</h3>
-                    <p class="service-description">
-                        Nossas soluções são realizadas com componentes de alta qualidade, garantindo a durabilidade e a performance que você espera.
-                    </p>
+                    <h3>Melhor Desempenho</h3>
+                    <p>Soluções eficazes com Qualidade e cuidado com seu aparelho.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tachometer-alt"></i>
+                    <div class="service-image">
+                        <img src="otimizacao.png" alt="Serviço de Otimização">
                     </div>
-                    <h3 class="service-title">Otimização de Performance</h3>
-                    <p class="service-description">
-                        Deixe seu dispositivo mais rápido e responsivo. Removemos a lentidão para que você aproveite todo o potencial do seu aparelho.
-                    </p>
+                    <h3>Melhoria de Performance</h3>
+                    <p>Aprimore a velocidade e funcionamento do seu dispositivo móvel.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    <div class="service-image">
+                        <img src="atualizacao.png" alt="Serviço de Atualização">
                     </div>
-                    <h3 class="service-title">Atualização e Segurança</h3>
-                    <p class="service-description">
-                        Mantenha seu sistema seguro e atualizado com as últimas melhorias, protegendo seus dados e garantindo a estabilidade.
-                    </p>
+                    <h3>Modernização</h3>
+                    <p>Mantenha seu dispositivo sempre atualizado e protegido.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="about-image.png" alt="Equipamentos modernos - Digital LA Atibaia">
-                </div>
-                <div class="about-text">
-                    <h3 class="about-subtitle">Tecnologia de Ponta e Expertise Comprovada</h3>
-                    <p class="about-description">
-                        Investimos constantemente em equipamentos modernos e inovadores, cuja alta tecnologia proporciona 
-                        reparos perfeitos e a qualidade desejada pelo cliente. Nossa equipe especializada garante que cada 
-                        serviço seja executado com a máxima precisão.
-                    </p>
-                    
-                    <div class="features-grid">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Técnicos Qualificados</h4>
-                                <p>Nossa equipe é altamente capacitada e atualizada com as últimas tecnologias de reparo.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-microchip"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Tecnologia de Ponta</h4>
-                                <p>Investimos em equipamentos modernos para diagnósticos precisos e reparos eficientes.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Atendimento Ágil</h4>
-                                <p>Serviço rápido, com comunicação clara e honesta em todas as etapas.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-certificate"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Garantia de Qualidade</h4>
-                                <p>Utilizamos peças de alta qualidade e oferecemos garantia em todos os nossos serviços.</p>
-                            </div>
-                        </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="pagamento.png" alt="Pagamento Facilitado">
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seminovos Section -->
-    <section class="seminovos" id="seminovos">
-        <div class="container">
-            <div class="seminovos-content">
-                <div class="seminovos-text">
-                    <h2 class="section-title">Dispositivos Seminovos com Garantia</h2>
-                    <p class="section-description">
-                        Procurando um novo aparelho com preço justo e total confiança? Nossa curadoria de dispositivos 
-                        seminovos passa por uma revisão técnica completa de mais de 30 itens, garantindo a performance 
-                        e a qualidade de um produto novo para você.
-                    </p>
-                    
-                    <ul class="seminovos-features">
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span>Revisão completa de mais de 30 itens</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span>Garantia de 3 meses</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span>Preços competitivos</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span>Qualidade garantida</span>
-                        </li>
-                    </ul>
-                    
-                    <a href="https://www.whatsapp.com/product/9687746434685649/5511980833734/?app_absent=0" target="_blank" class="btn btn-primary">
-                        Ver Catálogo de Seminovos
-                    </a>
-                </div>
-                <div class="seminovos-image">
-                    <img src="seminovos-image.png" alt="Dispositivos Seminovos - Digital LA Atibaia">
+                    <h3>Formas de Pagamento</h3>
+                    <p>Aceitamos cartões de crédito e débito para sua comodidade.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="depoimentos">
+    <section id="testimonials" class="testimonials">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
-                <p class="section-subtitle">A satisfação dos nossos clientes é a nossa maior recompensa.</p>
-            </div>
+            <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">
+                    <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">
-                        "Excelente atendimento! Meu celular ficou como novo após o reparo. Recomendo a todos!"
-                    </p>
-                    <div class="testimonial-author">
-                        <strong>Carlos Silva</strong>
-                    </div>
+                    <p class="testimonial-text">"Serviço de qualidade e preço justo!!!"</p>
+                    <span class="testimonial-author">Valquiria Luna</span>
                 </div>
                 
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">
+                    <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">
-                        "Profissionais muito competentes. Resolveram o problema do meu smartphone rapidamente."
-                    </p>
-                    <div class="testimonial-author">
-                        <strong>Maria Santos</strong>
-                    </div>
+                    <p class="testimonial-text">"Super indico, excelente profissional"</p>
+                    <span class="testimonial-author">Alessandro Doratt</span>
                 </div>
                 
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">
+                    <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">
-                        "Preço justo e serviço de qualidade. Já indiquei para vários amigos."
-                    </p>
-                    <div class="testimonial-author">
-                        <strong>João Oliveira</strong>
-                    </div>
+                    <p class="testimonial-text">"Preço bom ótimo atendimento"</p>
+                    <span class="testimonial-author">Eliana Cezar</span>
                 </div>
-            </div>
-            
-            <div class="google-rating">
-                <i class="fas fa-star"></i>
-                <span>Avaliação 5.0 no Google</span>
+                
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Top dos top. Confiança e bom atendimento!"</p>
+                    <span class="testimonial-author">Adriano R</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contato">
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Fale com um Especialista Agora</h2>
-                <p class="section-subtitle">Estamos prontos para te ajudar. Escolha o melhor canal para você.</p>
+            <h2 class="section-title">Conecte-se Conosco</h2>
+            <p class="contact-description">Estamos prontos para ajudar! Escolha a melhor forma de contato:</p>
+            
+            <div class="contact-grid">
+                <a href="https://wa.me/5511980833734?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20r%C3%A1pido%20para%20meu%20aparelho" 
+                   class="contact-card whatsapp" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Orçamento rápido</p>
+                </a>
+
+                <a href="tel:+5511980833734" class="contact-card phone">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Telefone</h3>
+                    <p>(11) 98083-3734</p>
+                </a>
+
+                <a href="https://maps.app.goo.gl/13RasDdXfyhPCDDMA" class="contact-card maps" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Localização</h3>
+                    <p>Atibaia - SP</p>
+                </a>
+
+                <a href="https://g.co/kgs/UFQ8xjr" class="contact-card google-business" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3>Google Meu Negócio</h3>
+                    <p>Ver informações</p>
+                </a>
             </div>
             
-            <div class="contact-content">
-                <div class="contact-info-grid">
-                    <h3 class="contact-subtitle">Informações de Contato</h3>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Endereço</h4>
-                            <p>Atibaia - SP</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Telefone</h4>
-                            <p>(11) 98083-3734</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>WhatsApp</h4>
-                            <p>Atendimento rápido e direto</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Horário de Funcionamento</h4>
-                            <p>Segunda a Sexta: 9h às 18h</p>
-                            <p>Sábado: 9h às 14h</p>
-                        </div>
-                    </div>
-                </div>
+            <!-- Formulário de Contato -->
+            <div class="contact-form-container">
+                <h3 class="form-title">Precisa de um orçamento?</h3>
+                <p class="form-subtitle">Por favor, informe o modelo do aparelho e o defeito apresentado para que possamos gerar o orçamento.</p>
                 
-                <div class="contact-form-wrapper">
-                    <h3 class="contact-subtitle">Entre em Contato</h3>
-                    <p class="form-description">Envie sua mensagem e entraremos em contato o mais breve possível.</p>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                    </div>
                     
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-success btn-block">
-                            <i class="fab fa-whatsapp"></i>
-                            Enviar via WhatsApp
-                        </button>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Seu telefone (WhatsApp)" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" 
+                                  placeholder="Modelo do aparelho e descrição do defeito (ex: iPhone 11 com tela trincada, Samsung Galaxy S20 não carrega, etc.)" 
+                                  rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i> Enviar Solicitação de Orçamento
+                    </button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="disclaimer-footer">
-            <div class="container">
-                <p>A Digital LA é uma empresa de assistência técnica independente e não possui afiliação, endosso ou autorização de nenhuma marca de fabricante de dispositivos (OEM).</p>
-            </div>
-        </div>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
+                <div class="footer-brand">
                     <h3>Digital LA</h3>
-                    <p>Soluções inteligentes para seus dispositivos em Atibaia.</p>
+                    <p>Soluções Inovadoras para Seus Dispositivos</p>
                 </div>
                 
-                <div class="footer-col">
-                    <h4>Serviços</h4>
-                    <ul>
-                        <li><a href="#servicos">Análise Completa</a></li>
-                        <li><a href="#servicos">Manutenção Especializada</a></li>
-                        <li><a href="#servicos">Otimização de Performance</a></li>
-                        <li><a href="#servicos">Atualização e Segurança</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#seminovos">Seminovos</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> (11) 98083-3734</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Atibaia - SP</li>
-                    </ul>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/lacellcelulares/" target="_blank" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@lacellcelulares/shorts" target="_blank" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+                <div class="footer-social">
+                    <p class="footer-cta">Veja o antes e depois dos serviços em nossas redes! Ficou incrível!</p>
+                    <div class="social-icons">
                         <a href="https://www.tiktok.com/@lea.cell.infocell" target="_blank" aria-label="TikTok">
                             <i class="fab fa-tiktok"></i>
                         </a>
-                        <a href="https://www.facebook.com/people/Lacellcelulares/61576539152584/" target="_blank" aria-label="Facebook">
+                        <a href="https://www.youtube.com/@lacellcelulares" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/61576539152584" target="_blank" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
+                        <a href="https://www.instagram.com/lacellcelulares/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Digital LA</h4>
+                    <p>Atibaia - São Paulo</p>
+                    <p>Especialistas em cuidados técnicos</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Digital LA. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Digital LA. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5511980833734?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- JavaScript -->
-    <script>
-        // Menu Toggle
-        const menuToggle = document.getElementById("menuToggle");
-        const nav = document.getElementById("nav");
-        
-        menuToggle.addEventListener("click", () => {
-            nav.classList.toggle("active");
-            menuToggle.classList.toggle("active");
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll("a[href^=\"#\"]").forEach(anchor => {
-            anchor.addEventListener("click", function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute("href"));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-                    nav.classList.remove("active");
-                    menuToggle.classList.remove("active");
-                }
-            });
-        });
-
-        // Contact Form
-        const contactForm = document.getElementById("contactForm");
-        contactForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            
-            const name = document.getElementById("name").value;
-            const phone = document.getElementById("phone").value;
-            const message = document.getElementById("message").value;
-            
-            const whatsappMessage = `Olá! Meu nome é ${name}.%0A%0ATelefone: ${phone}%0A%0AMensagem: ${message}`;
-            const whatsappURL = `https://wa.me/5511980833734?text=${whatsappMessage}`;
-            
-            window.open(whatsappURL, "_blank");
-        });
-
-        // Header Scroll Effect
-        window.addEventListener("scroll", () => {
-            const header = document.querySelector(".header");
-            if (window.scrollY > 100) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
